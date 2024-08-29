@@ -1,0 +1,647 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Belfast Grotesk Regular';
+    src: url('./fonts/Belfast Grotesk Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Belfast Grotesk';
+    src: url('./fonts/Belfast Grotesk Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    --heading-size: 72px;
+    --lower-heading-size: 40px;
+    --content-size: 50px;
+    --lower-content-size: 32px;
+}
+::selection{
+    background-color: rgba(111, 110, 111, 0.5);
+}
+body{
+    font-family: 'Belfast Grotesk', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    height: 100vh;
+}
+
+.top{
+    background: 
+    linear-gradient(to right, black 50%,rgba(255, 255, 255, 0) 100%), /* Horizontal black on the left */
+    linear-gradient(to bottom, rgb(16,8,146), rgb(160,9,172), rgb(193,122,158), rgb(143,90,183)); /* Vertical gradient on the right */    
+    padding: 1em 1em 0em 1em;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    margin-bottom: 2em;
+    border: 1px solid rgb(75, 61, 61);
+    border-radius: 50px;
+    justify-content: space-between;
+    padding: 0.3em;
+    font-family: "Edu VIC WA NT Beginner";
+    font-weight: 700;
+    font-size: 20px;
+    color: azure;
+    background-color: rgba(29, 27, 27, 0.5);
+
+    /* justify-content: flex-end; */
+}
+
+.navbar > ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+}
+.navbar > ul > a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.contact-me{
+    padding: 0.8% 3%;
+    border: none;
+    border-radius: 50px;
+    /* font-size: 20px; */
+    font-weight: 800;
+    font-family: "Edu VIC WA NT Beginner";
+    font-weight: 700;
+    font-size: 20px;
+    /* background-color: rgb(241, 180, 240); */
+    background-color: rgb(164, 100, 168);
+    /* margin: 1px; */
+    cursor: pointer;
+
+    
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 1% 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar-items {
+    display: flex; /* Keep the items horizontal by default */
+}
+.close-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.about-contact-me{
+    padding: 2.5% 4%;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Edu VIC WA NT Beginner";
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer; 
+}
+
+.main-1{
+    display: flex;
+    /* padding: 2vmax; */
+    align-items: center;
+    justify-content: space-around;
+}
+.main-left > h1{
+    width: 50%;
+    font-size: var(--heading-size);
+    line-height: 1;
+    color: azure;
+}
+.main-left > h2{
+    font-family: "Montserrat",sans-serif;
+    color: rgb(135, 148, 152);
+    font-weight: 400;
+}
+.main-left > h4{
+    width: 11em;
+    font-family: "Montserrat",sans-serif;
+    /* text-align: justify; */
+    font-weight: 400;
+    color: rgb(135, 148, 152);
+}
+
+#about-me{
+    text-align:center;
+    font-size:var(--heading-size);
+    margin:auto;
+    margin-bottom: 100px;
+    line-height: 1;
+}
+.main2-right{
+    margin-right: 10%;
+}
+#profile-picture{
+    width: 30rem;
+    padding-right: 0;
+
+    max-width: 100%;
+    height: auto;
+}
+.main2-right>p{
+    text-align: justify;
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-family: "Montserrat",sans-serif;
+}
+/* colors{
+    rgba(16,8,146,255),
+    rgba(160,9,172,255),
+    rgba(193,122,158,255),
+    rgba(143,90,183,255)
+} */
+.top2{
+    background-color: black;
+    padding: 5em 1em 0.1em 1em;
+    color: aliceblue;
+    background: 
+        radial-gradient( ellipse at 110% 58%, rgba(16, 8, 146, 1) 0%, rgba(0, 0, 0, 1) 25%);    
+}
+.main-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+
+.main2-right{
+    width: 40%;
+    position: relative;
+    left: 10%;
+    /* font -size: var(--content-size); */
+}
+
+.main2-left{
+    font-size: var(--heading-size);
+}
+
+#my-skills{
+    text-align:center;
+    font-size:var(--heading-size);
+    margin-bottom: 100px;
+    line-height: 1;
+}
+#skill-name{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.top3{
+    background-color: black;
+    padding: 0em 1em 0.1em 1em;
+    color: aliceblue;
+    /*background: radial-gradient( ellipse at 110% 58%, rgba(16, 8, 146, 1) 0%, rgba(0, 0, 0, 1) 25%); */
+    background:         
+        radial-gradient( ellipse at -10% 25%, rgba(16, 8, 146, 1) -10%, rgba(0, 0, 0, 1) 25%);
+}
+.top4{
+    background-color: black;
+    padding: 0em 1em 0.1em 1em;
+    color: aliceblue;
+    /*background: radial-gradient( ellipse at 110% 58%, rgba(16, 8, 146, 1) 0%, rgba(0, 0, 0, 1) 25%); */
+    background:         
+        radial-gradient( ellipse at 80% 30%, rgb(228, 114, 198) -50%, rgba(0, 0, 0, 1) 20%),
+        radial-gradient( circle at 20% 80%, rgba(16, 8, 146, 1) -50%, rgba(0, 0, 0, 1) 15%);
+    background-blend-mode: screen;
+
+}
+.main-3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px 5rem;
+    margin: 5rem 4rem 5rem 4rem;
+    margin-bottom: 15rem;
+}
+
+.skill{
+    display: grid;
+    grid-template-columns:200px repeat(1, 1fr);
+    grid-template-rows:repeat(1, 1fr);
+    /* justify-items: center; */
+    align-items: center;
+}
+
+#my-projects{
+    text-align:center;
+    font-size:var(--heading-size);
+    margin-bottom: 100px;
+    line-height: 1;
+}
+.main-4{
+    margin: 10%;
+}
+#project-image{
+    width: 25em;
+    height: 10em;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.project1{
+    display: flex;
+    justify-content: center;
+    margin: 5% 1rem;
+    gap: 5%;
+}
+.project1 > #about-project {
+    margin-top: 40px;
+}
+#about-project>h4{
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.top5{
+    background-color: black;
+    padding: 0em 1em 0.1em 1em;
+    color: aliceblue;
+    /*background: radial-gradient( ellipse at 110% 58%, rgba(16, 8, 146, 1) 0%, rgba(0, 0, 0, 1) 25%); */
+    background:         
+    radial-gradient( ellipse at 60% 50%, rgba(160, 9, 172, 1) -50%, rgba(0, 0, 0, 1) 25%),
+    radial-gradient( ellipse at 20% 85%, rgba(16, 8, 146, 1) -50%, rgba(0, 0, 0, 1) 25%);
+    background-blend-mode: screen;
+}
+#contact-me{
+    text-align:center;
+    font-size:var(--heading-size);
+    padding-top: 100px;
+    line-height: 1;
+}
+.contact-container > #name, #email{
+    display: block;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 50%;
+    backdrop-filter: blur(10px); /* Adjust the blur intensity */
+    -webkit-backdrop-filter: blur(10px);
+}
+.contact-container > #message{
+    display: block;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 50%;
+
+    backdrop-filter: blur(10px); /* Adjust the blur intensity */
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.contact-container > #name{
+    font-size: 20px;
+    /* height: 30px; */
+}
+.contact-container > #email{
+    font-size: 20px;
+}
+.contact-container > #message{
+    font-size: 20px;
+    height: 250px;
+    border-radius: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: none;
+}
+#name::placeholder{
+    font-size: 18px;
+}
+#email::placeholder{
+    font-size: 18px;
+}
+#message::placeholder{
+    font-size: 18px;
+    align-items: first baseline;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 5%;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: transparent;
+    /* -webkit-backdrop-filter: blur(5px); */
+}
+.contact-container input[type="submit"] {
+    width: auto;
+    padding: 15px 40px;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color:  rgb(164, 100, 168);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "Edu VIC WA NT Beginner", cursive;}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10px 30px 10px;
+    background-color: black;
+    color: aliceblue;
+}
+.footer > h4{
+    font-size: 25px;
+    font-weight: 600;
+}
+.footer-right{
+    display: flex;
+    gap: 10%;
+}
+.footer-right > a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+}
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Start hidden off-screen */
+    z-index: 99;
+    font-size: 18px;
+    background-color: #555;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: right 0.5s ease; /* Animation */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+/* Button appears when scrolled down */
+#scrollToTopBtn.show {
+    right: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+    #about-me{
+        text-align:center;
+        font-size:var(--lower-heading-size);
+        margin-bottom: 80px;
+        /* width: 200px; */
+    }
+    .main-1{
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+    .main-1 > .main-left > h1{
+        width: 100%;
+        text-align: center;
+    }    
+    .main-1 > .main-left > h4{
+        width: 70%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .main-1 > .main-left > h2{
+        display: none;
+    }
+    #profile-picture{
+        width: 20rem;
+        border-radius: 50%;
+    }
+    .main2-left{
+        font-size: var(--lower-content-size);
+        display: none;
+    }
+    .main2-right{
+        width: 100%;
+        /* margin: auto; */
+    }
+
+    .main2-right > p{
+        width: 90%;
+        margin: 0;
+        text-align: justify;
+        margin-bottom: 25px;
+    }
+    .menu-icon {
+        display: block; /* Show the hamburger menu icon on mobile */
+    }
+
+    #navbar-items {
+        display: none; /* Hide the navbar items by default */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: rgba(29, 27, 27, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    #navbar-items.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    #navbar-items > a {
+        margin: 15px 0; /* Space items vertically */
+        font-size: 22px;
+    }
+    .close-icon {
+        display: block; /* Show the close icon when navbar is visible */
+    }
+
+    #navbar-items.active .close-icon {
+        display: block;
+    }
+
+    #my-skills{
+        text-align:center;
+        font-size:var(--lower-heading-size);
+        margin-bottom: 80px;
+    }
+    
+    #my-projects{
+        text-align:center;
+        font-size:var(--lower-heading-size);
+        margin-bottom: 80px;
+    }
+    .project1{
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+    .project1 > #project-image{
+        width: 100%;
+        height: 10em;
+    }
+    .project2{
+        flex-direction: column-reverse;
+    }
+    #contact-me{
+        text-align:center;
+        font-size:var(--lower-heading-size);
+        padding-top: 100px;
+        line-height: 1; 
+    }
+    
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    /* padding: 5%; */
+}
+    .contact-container input, .contact-container textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1px;
+}
+.contact-container > #name, #email{
+    width: 85%;
+}
+.contact-container > #message{
+    width: 85%;
+}
+#name::placeholder{
+    font-size: 15px;
+}
+#email::placeholder{
+    font-size: 15px;
+}
+#message::placeholder{
+    font-size: 15px;
+    align-items: first baseline;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#about-project>h1{
+    /* font-family: "Montserrat"; */
+    /* font-weight: 500; */
+    font-size: 35;
+    line-height: 1;
+    /* margin-bottom: 10px; */
+}
+.footer-right{
+    display: none;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    /* padding: 50px 10px 30px 10px; */
+}
+.footer > h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+}
+
+@media screen and (max-width: 1030px) {
+    
+    .main-3{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 40px 2rem;
+        margin: 5rem 1rem;
+        justify-items: center;
+    }
+    .main-left > h4{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .skill{
+        font-size: 18px;
+        grid-template-columns: 150px repeat(1, 1fr);
+    }
+    .project1 > #project-image{
+        width: 100%;
+        height: 7em;
+    }
+}
+@media screen and (max-width: 680px) {
+    .main-left > h1{
+        font-size: 56px;
+    }
+    .main-left > h4{
+        font-size: 22px;    
+    }
+    #skill-name{
+        font-size: 22px;
+        align-items:flex-start;
+        justify-content: center;
+    }
+    .skill{
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(2, 1fr);;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .main-left > h1{
+        font-size: 46px;
+    }
+    
+    .main-left > h4{
+        font-size: 20px;
+    }
+}
